@@ -1,11 +1,14 @@
 import React from "react";
+import Stories from "../../Components/Stories/Stories";
 
 const Home = () => {
   return (
     <div className="flex ml-72 justify-center w-full gap-10">
       <section className="bg-amber-200 w-2/5">
         {" "}
-        <div className="bg-teal-300 h-16">days</div>
+        <div className="bg-teal-300 h-16">
+          <Stories></Stories>
+        </div>
         <div className="bg-sky-300 h-screen overflow-y-visible">
           Post Content
         </div>
