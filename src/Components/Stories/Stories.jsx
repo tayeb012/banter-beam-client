@@ -103,8 +103,6 @@ const Stories = () => {
     },
   ];
 
-  console.log(userProfile);
-
   return (
     <div className="overflow-x-hidden">
       <Splide
