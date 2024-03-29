@@ -3,10 +3,10 @@ import Stories from "../../Components/Stories/Stories";
 
 const Home = () => {
   return (
-    <div className="flex ml-72 justify-center w-full gap-10">
-      <section className="bg-amber-200 w-2/5">
+    <div className="flex justify-center w-full gap-10 mt-8 mx-32">
+      <section className="w-[32rem]">
         {" "}
-        <div className="bg-teal-300 h-16">
+        <div className="h-20">
           <Stories></Stories>
         </div>
         <div className="bg-sky-300 h-screen overflow-y-visible">

@@ -6,10 +6,12 @@ const MainLayout = () => {
   return (
     <div className=" h-full  bg-black  text-white">
       <div className="flex ">
-        <div className="flex-1">
+        <div className="">
           <SideBar></SideBar>
         </div>
-        <Outlet></Outlet>
+        <section className="ml-64 ">
+          <Outlet></Outlet>
+        </section>
       </div>
     </div>
   );
