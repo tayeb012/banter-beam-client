@@ -1,6 +1,7 @@
 import React from "react";
 import Stories from "../../Components/Stories/Stories";
 import SuggestionProfile from "../../Components/SuggestionProfile/SuggestionProfile";
+import PostContent from "../../Components/PostContent/PostContent";
 
 const Home = () => {
   const names = [
@@ -103,6 +104,59 @@ const Home = () => {
     },
   ];
 
+  const footerLinks = [
+    {
+      id: 1,
+      name: "About",
+      link: "https://about.instagram.com",
+    },
+    {
+      id: 2,
+      name: "Help",
+      link: "https://help.instagram.com",
+    },
+    {
+      id: 3,
+      name: "Press",
+      link: "https://about.instagram.com/blog",
+    },
+    {
+      id: 4,
+      name: "API",
+      link: "https://developers.facebook.com/docs/instagram",
+    },
+    {
+      id: 5,
+      name: "Jobs",
+      link: "https://about.instagram.com/about-us/careers",
+    },
+    {
+      id: 6,
+      name: "Privacy",
+      link: "https://privacycenter.instagram.com/policy/?entry_point=ig_help_center_data_policy_redirect",
+    },
+    {
+      id: 7,
+      name: "Terms",
+      link: "https://help.instagram.com/581066165581870",
+    },
+    {
+      id: 8,
+      name: "Locations",
+      link: "https://www.instagram.com/explore/locations",
+    },
+    {
+      id: 9,
+      name: "Language",
+      link: "https://www.instagram.com/language/preferences",
+    },
+    {
+      id: 10,
+      name: "Meta Verified",
+      link: "https://accountscenter.instagram.com/meta_verified/?entrypoint=web_footer",
+    },
+  ];
+
   return (
     <div className="flex justify-center w-full gap-10 mt-8 mx-32">
       <section className="w-[32rem]">
@@ -110,30 +164,48 @@ const Home = () => {
         <div className="h-20">
           <Stories></Stories>
         </div>
-        <div className="bg-sky-300 h-screen overflow-y-visible">
-          Post Content
+        <div className="pb-10">
+          <PostContent></PostContent>
         </div>
       </section>
       <section className=" w-72 ">
-        <div className=" px-2 h-14 my-2">
-          <SuggestionProfile
-            userName="Tayeb Hossan"
-            userPhoto="https://i.ibb.co/n7PsPSQ/TAYEB-DSC-0163.jpg"
-            haveTodo="Switch"
-          />
-        </div>
-        <div className="text-[13px] flex justify-between items-center h-5 mb-2 mx-2">
-          <span className="text-[#A2A2A2]">Suggested for you</span>
-          <span className="cursor-pointer hover:text-[#A2A2A2]">See All</span>
-        </div>
-        <div className="px-2  h-fit flex flex-col gap-5">
-          {userProfile.slice(0, 5).map((user, index) => (
+        <div>
+          <div className=" px-2 h-14 my-2">
             <SuggestionProfile
-              key={index}
-              userName={user.name}
-              userPhoto={user.image}
-              haveTodo="Follow"
+              userName="Tayeb Hossan"
+              userPhoto="https://i.ibb.co/n7PsPSQ/TAYEB-DSC-0163.jpg"
+              haveTodo="Switch"
             />
+          </div>
+          <div className="text-[13px] flex justify-between items-center h-5 mb-2 mx-2">
+            <span className="text-[#A2A2A2]">Suggested for you</span>
+            <span className="cursor-pointer hover:text-[#A2A2A2]">See All</span>
+          </div>
+          <div className="px-2  h-fit flex flex-col gap-2">
+            {userProfile.slice(0, 5).map((user, index) => (
+              <SuggestionProfile
+                key={index}
+                userName={user.name}
+                userPhoto={user.image}
+                haveTodo="Follow"
+              />
+            ))}
+          </div>
+        </div>
+        <div className="mt-10 ml-2 text-[13px] flex items-end  flex-wrap gap-[2px]">
+          {footerLinks?.map((footerLink, index) => (
+            <React.Fragment key={footerLink.id}>
+              <div>
+                <a href={footerLink.link} target="_blank" rel="noreferrer">
+                  <span className="text-[#A2A2A2] hover:underline">
+                    {footerLink.name}
+                  </span>
+                </a>
+              </div>
+              {index < footerLinks.length - 1 && (
+                <div className="text-[#A2A2A2]">•</div>
+              )}
+            </React.Fragment>
           ))}
         </div>
       </section>

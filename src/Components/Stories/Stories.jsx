@@ -118,7 +118,7 @@ const Stories = () => {
           <SplideSlide key={user.id}>
             <div className="flex flex-col items-center gap-1">
               <div className="bg-instagram-gradient size-14 rounded-full rotate-[120deg] flex justify-center items-center">
-                <div className="rounded-full size-[64px] overflow-hidden -rotate-[120deg]">
+                <div className="rounded-full size-[64px] overflow-hidden -rotate-[120deg] border-[2px] border-black">
                   <img
                     src={user.image}
                     alt={user.name}

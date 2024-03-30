@@ -14,7 +14,7 @@ const SuggestionProfile = ({
         </section>
         <section>
           <h3 className="font-bold">{userName}</h3>
-          <p className="font-extralight">{subTitle}</p>
+          <p className="font-extralight text-[#A2A2A2]">{subTitle}</p>
         </section>
       </span>
       <section className="text-[#2eabff] hover:text-white cursor-pointer">

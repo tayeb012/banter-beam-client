@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { GoHomeFill, GoLinkExternal, GoSearch } from "react-icons/go";
 import { MdOutlineExplore } from "react-icons/md";
 import { BsCameraReelsFill } from "react-icons/bs";
-import { AiFillMessage } from "react-icons/ai";
+import { LiaFacebookMessenger } from "react-icons/lia";
 import { FaRegHeart } from "react-icons/fa";
 import { CgAddR, CgProfile } from "react-icons/cg";
 import { PiAtThin } from "react-icons/pi";
@@ -39,7 +39,7 @@ const SideBar = () => {
             <BsCameraReelsFill /> Reels
           </Link>
           <Link className={` ${linkStyle}`} to={`/messages`}>
-            <AiFillMessage /> Messages
+            <LiaFacebookMessenger /> Messages
           </Link>
           <Link className={` ${linkStyle}`} to={`/messages`}>
             <CgAddR /> Creator
